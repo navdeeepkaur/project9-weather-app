@@ -1,0 +1,269 @@
+input {
+   width: 80%;
+   appearance: none;
+   background: none;
+   border: none;
+   outline: none;
+   background-color: rgba(255, 255, 255, 0.8);
+   border-radius: 16px 0 0px 16px;
+   color: #313131;
+   transition: 0.4s ease;
+}
+
+.inputBox:focus {
+   background-color: rgba(255, 255, 255, 1);
+}
+
+#btn {
+   height: 100%;
+   backface-visibility: hidden;
+   background-color: rgb(14, 158, 242);
+   opacity: 0.5;
+   border-style: none;
+   color: #fff;
+   cursor: pointer;
+   display: inline-block;
+   transition: transform .3s;
+   border-radius: 0px 16px 16px 0;
+}
+
+#btn:hover {
+   background-color: rgb(13, 153, 195);
+   box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+   opacity: 1;
+   transform: scale(1.02);
+   transition-duration: .35s;
+   box-shadow: rgba(19, 82, 46, 0.2) 0 6px 12px;
+
+}
+
+#btn:active {
+   transform: scale(0.95);
+   transition-duration: .35s;
+}
+
+.title {
+   position: absolute;
+   font-size: 50px;
+   font-weight: bold;
+}
+
+.search {
+   position: absolute;
+   display: flex;
+   height: 50px;
+   width: 50%;
+   top: 20px;
+   justify-content: center;
+}
+
+.empty-search {
+   position: absolute;
+   display: flex;
+   height: 50px;
+   width: 50%;
+   top: 45vh;
+   justify-content: center;
+
+}
+
+.app {
+   height: 100%;
+   width: 100%;
+}
+
+.empty {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background: url('./images/empty.jpg');
+   background-size: cover;
+}
+
+.top {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 75%;
+}
+
+.warm {
+   background-image: url('./images/warm.png');
+}
+
+.cold {
+   background-image: url('./images/cold.png');
+   background-position-y: -350px;
+   background-position-x: -200px;
+   background-repeat: none;
+}
+
+.hot {
+   background-image: url('./images/hot.jpg');
+   background-position: 100px;
+}
+
+.chill {
+   background-image: url('./images/chill.png');
+   background-position-y: -300px;
+}
+
+.overlay {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 100%;
+   background-size: cover;
+   background-color: rgba(0, 0, 0, 0.6);
+   justify-content: flex-end;
+}
+
+.bottom {
+   height: 25%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.current {
+   width: 90%;
+   padding: 20px;
+   height: 80%;
+   color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.next {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   width: 20%;
+   height: 100%;
+   background-color: #fff;
+}
+
+.day-date,
+.location {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.inner-day-date,
+.inner-location {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+}
+
+.inner-day-date {
+   align-items: start;
+   text-shadow: rgb(42, 41, 39) 1px 0 10px;
+}
+
+.inner-location {
+   align-items: end;
+   text-shadow: rgb(42, 41, 39) 1px 0 10px;
+}
+
+h1 {
+   font-size: 150px;
+   text-shadow: rgb(42, 41, 39) 1px 0 10px;
+   margin: 1% 0 4% 0;
+}
+
+i {
+   text-shadow: rgb(42, 41, 39) 1px 0 10px;
+}
+
+.temperature {
+   color: #2f2d2d;
+   font-weight: 600;
+}
+
+.next-date {
+   font-weight: 600;
+   color: #696767;
+}
+
+.temp {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+h3 {
+   margin: 0;
+}
+
+hr{
+   height: 90%;
+   border: 1px solid #908e8e;
+}
+
+@media only screen and (max-width:650px) {
+   h1 {
+      font-size: 100px;
+   }
+
+   .search,
+   .empty-search {
+      width: 90%;
+   }
+
+   .next img {
+      height: 40%;
+      width: 40%;
+   }
+
+   .top {
+      height: 85%;
+   }
+
+   .bottom {
+      height: 15%;
+   }
+
+   .next span {
+      font-size: 12px;
+   }
+
+}
+
+@media only screen and (max-width:550px) {
+
+   h1 {
+      font-size: 80px;
+      margin: 0px;
+   }
+
+   .current {
+      padding: 0px;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   .day-date,
+   .temp-img,
+   h3 {
+      display: none;
+   }
+
+
+   .inner-location {
+      align-items: start;
+   }
+
+   .location {
+      flex-direction: row-reverse;
+   }
+
+
+}
